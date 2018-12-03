@@ -13,13 +13,14 @@ This is the REST service only; UI part is in another repository
 
 ### For requirement please view the project no. 8 <a href="https://blog.codewithdan.com/10-angular-and-typescript-projects-to-take-you-from-zero-to-hero/" target="_blank">here</a>.
 
+
 ## Mongo DB set up
 Download and install MongoDB from [here](https://docs.mongodb.com/v3.2/administration/install-community/ "Install Mongo DB").
 After installation open command prompt and run command : 
 ```
 mongo
 ```
-Once the prompt becomes *MongoDB Enterprise>*, run the following command:
+Once the prompt becomes *"MongoDB Enterprise>"*, run the following command:
 ```
 use CustomerDB
 ```
