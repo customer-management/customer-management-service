@@ -7,6 +7,8 @@ This is the REST service only; UI part is in another repository
 
 
 **Name :** Arnab Mondal
+
+
 A passionate coder, holding 6 years of experience in Java, J2EE, SOAP, REST and Microservices with Spring Boot.
   
   
@@ -28,6 +30,12 @@ mongo
 Once the prompt becomes *"MongoDB Enterprise>"*, run the following command:
 ```
 use CustomerDB
+
+db.createUser({
+  user: "arnab01",
+  pwd: "Pass10word",
+  roles: []
+});
 ```
 This will create a database named **CustomerDB** and  the application is ready to run.
 		
