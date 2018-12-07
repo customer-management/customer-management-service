@@ -1,0 +1,66 @@
+[
+    {
+        "countryCode": "AFG",
+        "countryName": "Afghanistan"
+    },
+    {
+        "countryCode": "AUS",
+        "countryName": "Australia"
+    },
+    {
+        "countryCode": "BD",
+        "countryName": "Bangladesh"
+    },
+    {
+        "countryCode": "BEL",
+        "countryName": "Belgium"
+    },
+    {
+        "countryCode": "BMU",
+        "countryName": "Bermuda"
+    },
+    {
+        "countryCode": "BTN",
+        "countryName": "Bhutan"
+    },
+    {
+        "countryCode": "BRA",
+        "countryName": "Brazil"
+    },
+    {
+        "countryCode": "CAN",
+        "countryName": "Canada"
+    },
+    {
+        "countryCode": "CHL",
+        "countryName": "Chile"
+    },
+    {
+        "countryCode": "CHN",
+        "countryName": "China"
+    },
+    {
+        "countryCode": "CRI",
+        "countryName": "Costa Rica"
+    },
+    {
+        "countryCode": "HRV",
+        "countryName": "Croatia"
+    },
+    {
+        "countryCode": "CZE",
+        "countryName": "Czech Republic"
+    },
+    {
+        "countryCode": "DNK",
+        "countryName": "Denmark"
+    },
+    {
+        "countryCode": "ECU",
+        "countryName": "Ecuador"
+    },
+    {
+        "countryCode": "IND",
+        "countryName": "INDIA"
+    }
+]
