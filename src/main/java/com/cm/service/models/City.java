@@ -1,25 +1,25 @@
 package com.cm.service.models;
 
-public class City {
+import java.io.Serializable;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class City implements Serializable, Comparable<City> {
+	private static final long serialVersionUID = -57683930201L;
+
 	public City() {
 	}
-	
+
 	public City(String cityCode) {
 		this.cityCode = cityCode;
 	}
 
-	private String id;
+	@Id
 	private String cityCode;
 	private String cityName;
 	private String stateCode;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public String getCityCode() {
 		return cityCode;
@@ -43,5 +43,10 @@ public class City {
 
 	public void setStateCode(String stateCode) {
 		this.stateCode = stateCode;
+	}
+
+	@Override
+	public int compareTo(City o) {
+		return this.cityName.compareTo(o.cityName);
 	}
 }

@@ -1,0 +1,62 @@
+[
+    {
+        "cityCode": "BLR",
+        "cityName": "Bengaluru",
+        "stateCode": "KA"
+    },
+    {
+        "cityCode": "BBI",
+        "cityName": "Bhubaneshwar",
+        "stateCode": "OR"
+    },
+    {
+        "cityCode": "DEL",
+        "cityName": "Delhi",
+        "stateCode": "DL"
+    },
+    {
+        "cityCode": "HWH",
+        "cityName": "Howrah",
+        "stateCode": "WB"
+    },
+    {
+        "cityCode": "HYD",
+        "cityName": "Hyderabad",
+        "stateCode": "TG"
+    },
+    {
+        "cityCode": "KOL",
+        "cityName": "Kolkata",
+        "stateCode": "WB"
+    },
+    {
+        "cityCode": "LKN",
+        "cityName": "Lucknow",
+        "stateCode": "UP"
+    },
+    {
+        "cityCode": "MUM",
+        "cityName": "Mumbai",
+        "stateCode": "MH"
+    },
+    {
+        "cityCode": "NGP",
+        "cityName": "Nagpur",
+        "stateCode": "MH"
+    },
+    {
+        "cityCode": "PUN",
+        "cityName": "Pune",
+        "stateCode": "MH"
+    },
+    {
+        "cityCode": "SGR",
+        "cityName": "Siliguri",
+        "stateCode": "WB"
+    },
+    {
+        "cityCode": "VSKP",
+        "cityName": "Vishakhapattanam",
+        "stateCode": "AP"
+    }
+]

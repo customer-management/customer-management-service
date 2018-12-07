@@ -1,0 +1,183 @@
+[
+	{
+		"stateCode" : "AN",
+		"stateName" : "Andaman & Nicobar Island",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "AP",
+		"stateName" : "Andhra Pradesh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "AR",
+		"stateName" : "Arunachal Pradesh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "AS",
+		"stateName" : "Assam",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "BR",
+		"stateName" : "Bihar",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "CH",
+		"stateName" : "Chandigarh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "CT",
+		"stateName" : "Chhattisgarh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "DN",
+		"stateName" : "Dadra and Nagar Haveli",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "DD",
+		"stateName" : "Daman and Diu",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "DL",
+		"stateName" : "Delhi",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "GA",
+		"stateName" : "Goa",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "GJ",
+		"stateName" : "Gujarat",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "HR",
+		"stateName" : "Haryana",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "HP",
+		"stateName" : "Himachal Pradesh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "JK",
+		"stateName" : "Jammu and Kashmir",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "JH",
+		"stateName" : "Jharkhand",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "KA",
+		"stateName" : "Karnataka",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "KL",
+		"stateName" : "Kerala",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "LD",
+		"stateName" : "Lakshadweep",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "MP",
+		"stateName" : "Madhya Pradesh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "MH",
+		"stateName" : "Maharashtra",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "MN",
+		"stateName" : "Manipur",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "ML",
+		"stateName" : "Meghalaya",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "MZ",
+		"stateName" : "Mizoram",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "NL",
+		"stateName" : "Nagaland",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "OR",
+		"stateName" : "Orissa",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "PY",
+		"stateName" : "Puducherry",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "PB",
+		"stateName" : "Punjab",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "RJ",
+		"stateName" : "Rajasthan",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "SK",
+		"stateName" : "Sikkim",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "TN",
+		"stateName" : "Tamil Nadu",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "TG",
+		"stateName" : "Telangana",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "TR",
+		"stateName" : "Tripura",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "UP",
+		"stateName" : "Uttar Pradesh",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "UT",
+		"stateName" : "Uttarakhand",
+		"countryCode" : "IND"
+	},
+	{
+		"stateCode" : "WB",
+		"stateName" : "West Bengal",
+		"countryCode" : "IND"
+	}
+	
+]
