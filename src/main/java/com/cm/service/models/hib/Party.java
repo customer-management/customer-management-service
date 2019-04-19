@@ -9,18 +9,25 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cms_party")
-public class Party implements Serializable {
+public class Party implements Serializable, CMEntity {
 	private static final long serialVersionUID = -3620562262886952263L;
-	@Id
-	@Column(name = "party_id")
-	private String partyId;
+
+	private static final String ID_PREFIX = "PAR";
 	
+	public Party() {
+		this.partyId = generateId(ID_PREFIX);
+	}
+	
+	@Id
+	@Column(name = "party_id", length = 10)
+	private String partyId;
+
 	@Column(name = "party_name")
 	private String partyName;
-	
+
 	@Column(name = "party_email")
 	private String email;
-	
+
 	@Column(name = "party_phone")
 	private String phone;
 

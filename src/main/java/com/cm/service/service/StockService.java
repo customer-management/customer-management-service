@@ -1,6 +1,7 @@
 package com.cm.service.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,22 @@ public class StockService {
 	private StockRepository repository;
 
 	public Stock addStock(Stock stock) {
+		Stock existing = repository.getStockByStockDescription(stock.getStockDescription());
+		if (existing != null) {
+			int updatedAvailavleStock = existing.getAvailableStocks() + stock.getAvailableStocks();
+			float prevDiscount = existing.getDiscount() * existing.getAvailableStocks();
+			float currentDiscount = stock.getDiscount() * stock.getAvailableStocks();
+
+			float unitPrice = ((existing.getUnitPrice() * existing.getAvailableStocks())
+					+ (stock.getUnitPrice() * stock.getAvailableStocks())) / updatedAvailavleStock;
+
+			existing.setAvailableStocks(updatedAvailavleStock);
+			existing.setDiscount((prevDiscount + currentDiscount) / updatedAvailavleStock);
+
+			existing.setUnitPrice(unitPrice);
+			
+			return repository.save(existing);
+		}
 		return repository.save(stock);
 	}
 
@@ -22,7 +39,8 @@ public class StockService {
 	}
 
 	public Stock findStock(String stockId) {
-		return repository.findById(stockId).get();
+		Optional<Stock> found = repository.findById(stockId);
+		return found.isPresent() ? found.get() : null;
 	}
 
 	public List<Stock> findAllStocks() {

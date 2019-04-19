@@ -1,27 +1,40 @@
 package com.cm.service.models.hib;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "cms_order_item")
-public class OrderItem {
-	@Id
-	@Column(name="order_item_id")
-	private String orderItemId;
-	private String stockId;
-	private int quantity;
-	private float unitPrice;
-	private float orderTotal;
+public class OrderItem implements Serializable, CMEntity {
+	private static final long serialVersionUID = 3896851921431344675L;
+	private static final String ID_PREFIX = "ORI";
 
-	public String getStockId() {
-		return stockId;
+	public OrderItem() {
+		this.orderItemId = generateId(ID_PREFIX);
 	}
 
-	public void setStockId(String stockId) {
-		this.stockId = stockId;
+	@Id
+	@Column(name = "order_item_id", length = 10)
+	private String orderItemId;
+	private int quantity;
+	private float orderTotal;
+
+	@OneToOne
+	@JoinColumn(name = "stock_id", referencedColumnName = "stock_id", nullable = false)
+	private Stock stock;
+
+	public Stock getStock() {
+		return stock;
+	}
+
+	public void setStock(Stock stock) {
+		this.stock = stock;
 	}
 
 	public int getQuantity() {
@@ -30,7 +43,6 @@ public class OrderItem {
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-		updateOrderTotal();
 	}
 
 	public float getOrderTotal() {
@@ -49,22 +61,5 @@ public class OrderItem {
 		this.orderItemId = orderItemId;
 	}
 
-	public void adjustQuantity(int quantity) {
-		this.quantity += quantity;
-		updateOrderTotal();
-	}
-
-	public float getUnitPrice() {
-		return unitPrice;
-	}
-
-	public void setUnitPrice(float unitPrice) {
-		this.unitPrice = unitPrice;
-		updateOrderTotal();
-	}
-
-	private void updateOrderTotal() {
-		this.orderTotal = this.unitPrice * this.quantity;
-	}
 
 }

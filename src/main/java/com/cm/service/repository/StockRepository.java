@@ -7,5 +7,5 @@ import com.cm.service.models.hib.Stock;
 
 @Repository
 public interface StockRepository extends JpaRepository<Stock, String> {
-
+	Stock getStockByStockDescription(String description);
 }

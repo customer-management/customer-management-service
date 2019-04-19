@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,10 +20,10 @@ import com.cm.service.service.OrderService;
 public class OrderController {
 	@Autowired
 	private OrderService service;
+	
 
 	@PostMapping(value = "/order", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Order> createOrder(@RequestBody Order order) {
-		order.updateTotalOrderAmount();
 		Order savedOrder = service.addOrder(order);
 		return new ResponseEntity<>(savedOrder, HttpStatus.CREATED);
 	}
@@ -44,4 +45,11 @@ public class OrderController {
 		List<Order> foundOrders = service.findOrdersByPartyId(partyId);
 		return new ResponseEntity<>(foundOrders, HttpStatus.OK);
 	}
+	
+	@PutMapping(value = "/order", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<Order> updateOrder(@RequestBody Order order) {
+		Order savedOrder = service.updateOrder(order);
+		return new ResponseEntity<>(savedOrder, HttpStatus.CREATED);
+	}
+	
 }
