@@ -13,6 +13,8 @@ import com.cm.service.repository.StockRepository;
 public class StockService {
 	@Autowired
 	private StockRepository repository;
+	@Autowired
+	private ChangeLogService changeLogService;
 
 	public Stock addStock(Stock stock) {
 		Stock existing = repository.getStockByStockDescription(stock.getStockDescription());
@@ -28,14 +30,20 @@ public class StockService {
 			existing.setDiscount((prevDiscount + currentDiscount) / updatedAvailavleStock);
 
 			existing.setUnitPrice(unitPrice);
-			
-			return repository.save(existing);
+
+			Stock updated = repository.save(existing);
+			changeLogService.insertChangeLog("STOCK", updated, "UP");
+			return updated;
 		}
-		return repository.save(stock);
+		Stock inserted = repository.save(stock);
+		changeLogService.insertChangeLog("STOCK", inserted, "IN");
+		return inserted;
 	}
 
 	public Stock updateStock(Stock stock) {
-		return repository.save(stock);
+		Stock updated = repository.save(stock);
+		changeLogService.insertChangeLog("STOCK", updated, "UP");
+		return updated;
 	}
 
 	public Stock findStock(String stockId) {

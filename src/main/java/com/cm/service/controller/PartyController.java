@@ -23,6 +23,8 @@ public class PartyController {
 
 	@PostMapping(value = "/party", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Party> createParty(@RequestBody Party party) {
+		party.setPartyName(party.getPartyName().toUpperCase());
+		party.setAddress(party.getAddress().toUpperCase());
 		Party savedParty = service.addParty(party);
 		return new ResponseEntity<>(savedParty, HttpStatus.CREATED);
 	}

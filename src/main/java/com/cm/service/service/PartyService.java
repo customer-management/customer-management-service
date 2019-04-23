@@ -12,13 +12,19 @@ import com.cm.service.repository.PartyRepository;
 public class PartyService {
 	@Autowired
 	private PartyRepository repository;
-	
+	@Autowired
+	private ChangeLogService changeLogService;
+
 	public Party addParty(Party party) {
-		return repository.save(party);
+		Party savedParty = repository.save(party);
+		changeLogService.insertChangeLog("PARTY", savedParty, "IN");
+		return savedParty;
 	}
-	
+
 	public Party updateParty(Party party) {
-		return repository.save(party);
+		Party savedParty = repository.save(party);
+		changeLogService.insertChangeLog("PARTY", savedParty, "UP");
+		return savedParty;
 	}
 
 	public Party findParty(String partyId) {

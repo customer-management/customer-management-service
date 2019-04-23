@@ -13,23 +13,26 @@ public class Party implements Serializable, CMEntity {
 	private static final long serialVersionUID = -3620562262886952263L;
 
 	private static final String ID_PREFIX = "PAR";
-	
+
 	public Party() {
 		this.partyId = generateId(ID_PREFIX);
 	}
-	
+
 	@Id
 	@Column(name = "party_id", length = 10)
 	private String partyId;
 
-	@Column(name = "party_name")
+	@Column(name = "party_name", nullable = false)
 	private String partyName;
 
-	@Column(name = "party_email")
+	@Column(name = "party_email", unique = true)
 	private String email;
 
-	@Column(name = "party_phone")
+	@Column(name = "party_phone", unique = true)
 	private String phone;
+
+	@Column(name = "party_address")
+	private String address;
 
 	public String getPartyId() {
 		return partyId;
@@ -61,5 +64,13 @@ public class Party implements Serializable, CMEntity {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }
