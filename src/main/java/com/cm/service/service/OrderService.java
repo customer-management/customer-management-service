@@ -22,18 +22,26 @@ public class OrderService {
 
 	@Autowired
 	private StockService stockService;
+	
+	@Autowired
+	private ChangeLogService changeLogService;
 
 	public Order addOrder(Order order) {
 		verifyOrderIntegrity(order);
 		Order toSave = checkAndMergePreviousOrder(order);
+		boolean updating = toSave != order; // same object means a new entry, different objects means updating an existing order
 		updateOrderValue(toSave);
 		Order saved = repository.save(toSave);
 		updateStock(order);
+		toSave.setParty(saved.getParty());
+		changeLogService.insertChangeLog("ORD", toSave, (updating ? "UP" : "IN"));
 		return saved;
 	}
 
 	public Order updateOrder(Order order) {
-		return repository.save(order);
+		Order savedOrder = repository.save(order);
+		changeLogService.insertChangeLog("ORD", savedOrder, "UP");
+		return savedOrder;
 	}
 
 	public Order findOrder(String orderId) {
