@@ -25,10 +25,10 @@ public class Party implements Serializable, CMEntity {
 	@Column(name = "party_name", nullable = false)
 	private String partyName;
 
-	@Column(name = "party_email", unique = true)
+	@Column(name = "party_email", unique = true, length = 50)
 	private String email;
 
-	@Column(name = "party_phone", unique = true)
+	@Column(name = "party_phone", unique = true, length = 16)
 	private String phone;
 
 	@Column(name = "party_address")

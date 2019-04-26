@@ -1,5 +1,6 @@
 package com.cm.service.models.hib;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,6 +13,7 @@ public class RecentItem implements CMEntity {
 	}
 
 	@Id
+	@Column(length = 12)
 	private String recordId;
 	private String itemType;
 	private String itemName;
