@@ -33,3 +33,7 @@ hs_err_pid*
 *build
 build
 build/*
+target
+target/*
+.idea
+.idea/*
